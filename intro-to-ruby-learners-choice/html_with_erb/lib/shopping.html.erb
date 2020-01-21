@@ -1,0 +1,11 @@
+<h1>Shopping List</h1>
+
+<% if list.empty? %>
+  <p>Your list is empty!</p>
+<% else %>
+  <ul>
+    <% list.each do |item| %>
+      <li><%= item %></li>
+    <% end %>
+  </ul>
+<% end %>

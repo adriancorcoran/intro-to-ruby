@@ -1,0 +1,6 @@
+up:
+  - ruby: 2.5.1
+  - bundler
+commands:
+  test: bin/test
+  style: bundle exec rubocop --auto-correct

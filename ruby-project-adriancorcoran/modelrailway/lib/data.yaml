@@ -1,0 +1,164 @@
+# Engines:
+# def initialize(catalogue, cost, quantity, length, wheelbase, has_tender = false, has_water = false, has_coal = false)
+SteamEngine:
+ -
+   cost: 120
+   quantity: 5
+   length: 14
+   wheelbase: 4-6-2
+   has_tender: true
+   has_water: true
+   has_coal: true
+ -
+   cost: 90
+   quantity: 2
+   length: 12
+   wheelbase: 4-4-2
+   has_tender: false
+   has_water: true
+   has_coal: true
+
+# def initialize(catalogue, cost, quantity, length, wheelbase, has_diesel = false)
+DieselEngine:
+ -
+   cost: 110
+   quantity: 3
+   length: 15
+   wheelbase: co-co
+   has_diesel: true
+ -
+   cost: 75
+   quantity: 13
+   length: 10
+   wheelbase: bo-bo
+   has_diesel: false
+
+# def initialize(catalogue, cost, quantity, length, wheelbase, is_charged = false)
+ElectricEngine:
+ -
+   cost: 150
+   quantity: 4
+   length: 14
+   wheelbase: co-co
+   is_charged: true
+
+# Trucks:
+# def initialize(catalogue, cost, quantity, full, is_covered, oil_type)
+OilTruck:
+ -
+   cost: 10
+   quantity: 20
+   full: true
+   is_covered: true
+   oil_type: crude
+ -
+   cost: 8
+   quantity: 22
+   full: false
+   is_covered: true
+   oil_type: processed
+
+# def initialize(catalogue, cost, quantity, full, is_covered, stone_type)
+QuarryTruck:
+ -
+   cost: 12
+   quantity: 10
+   full: false
+   is_covered: false
+   stone_type: limestone
+ -
+   cost: 20
+   quantity: 10
+   full: true
+   is_covered: false
+   stone_type: quartz
+
+# def initialize(catalogue, cost, quantity, full, is_covered, delicate_cargo = false)
+ClosedTruck:
+ -
+   cost: 5
+   quantity: 70
+   full: true
+   is_covered: true
+   delicate_cargo: true
+ -
+   cost: 6
+   quantity: 25
+   full: true
+   is_covered: true
+   delicate_cargo: false
+
+# Buildings:
+# def initialize(cost, quantity, engine_type, capacity, filled_slots = 0)
+EngineShed:
+ -
+   cost: 40
+   quantity: 10
+   engine_type: steam
+   capacity: 10
+   filled_slots: 5
+ -
+   cost: 45
+   quantity: 8
+   engine_type: diesel
+   capacity: 15
+   filled_slots: 0
+
+# def initialize(catalogue, cost, quantity)
+SignalBox:
+ -
+   cost: 25
+   quantity: 12
+
+# def initialize(catalogue, cost, quantity, is_terminus = false, num_platforms = 2, num_platforms_occupied = 0)
+Station:
+ -
+   cost: 100
+   quantity: 2
+   is_terminus: true
+   num_platforms: 10
+   num_platforms_occupied: 0
+ -
+   cost: 60
+   quantity: 5
+   is_terminus: false
+   num_platforms: 2
+   num_platforms_occupied: 1
+
+# Track
+# def initialize(catalogue, cost, quantity, length)
+StraightTrack:
+ -
+   cost: 3
+   quantity: 200
+   length: 10
+ -
+   cost: 5
+   quantity: 50
+   length: 100
+
+# def initialize(catalogue, cost, quantity, length, radius = 15)
+CurvedTrack:
+ -
+   cost: 4
+   quantity: 150
+   length: 13
+   radius: 5
+ -
+   cost: 5
+   quantity: 90
+   length: 19
+   radius: 10
+
+# def initialize(catalogue, cost, quantity, length, num_points = 2)
+PointTrack:
+ -
+   cost: 8
+   quantity: 20
+   length: 9
+   num_points: 3
+ -
+   cost: 6
+   quantity: 90
+   length: 8
+   num_points: 2
